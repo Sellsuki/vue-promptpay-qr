@@ -29,7 +29,7 @@
         transaction: { transactionCurrency: '764', transactionAmount: this.amount + '' },
         additionalData: {},
         unreserved: {}
-      })
+      }).data
     },
     components: {
       QrcodeVue

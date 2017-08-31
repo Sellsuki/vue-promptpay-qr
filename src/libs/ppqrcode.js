@@ -1,6 +1,6 @@
 var CRC = require('crc')
 
-function encode (jsonData) {
+export const encode = function (jsonData) {
   var post = jsonData
 
   if (post.pointOfInitiation) {
@@ -107,7 +107,7 @@ function encode (jsonData) {
 
     if (Object.keys(post.additionalData).length) {
       var billNumber = 0
-      var mobileNumber = 0
+      mobileNumber = 0
       var storeId = 0
       var customerId = 0
       var terminalId = 0
@@ -191,7 +191,7 @@ function encode (jsonData) {
   // res.status(200).json(json)
 }
 
-function decode (text) {
+export const decode = function (text) {
   // var text = req.body.text
   if (checkCRC(text)) {
     if (text.slice(0, 2) === '00') {
@@ -459,5 +459,5 @@ function strToCrc (str) {
   return result
 }
 
-exports.encode = encode
-exports.decode = decode
+// exports.encode = encode
+// exports.decode = decode
