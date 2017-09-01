@@ -1,6 +1,6 @@
 {
   "name": "vue-promptpay-qr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Vue.js project",
   "author": "Sellsuki",
   "main": "dist/static/vue-promtpay-qr.js",
@@ -16,6 +16,9 @@
     "type": "git",
     "url": "git+https://github.com/Sellsuki/vue-promptpay-qr.git"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "crc": "^3.4.4",
     "qrcode.vue": "^1.5.0",
