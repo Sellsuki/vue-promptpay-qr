@@ -29,3 +29,6 @@ Vue.use(VuePromptpayQr)
 <promptpay-qr id="1234567890123" :amount="500"></promptpay-qr>
 ```
 
+## Thanks to
+
+dtinth for awesome generator library https://github.com/dtinth/promptpay-qr
