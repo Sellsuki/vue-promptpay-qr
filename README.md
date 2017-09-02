@@ -1,6 +1,6 @@
 # vue-promptpay-qr
 
-> Component to generate promptpay qrcode
+> Component to generate promptpay qrcode. Demo here https://sellsuki.github.io/vue-promptpay-qr/
 
 ## Installation
 
