@@ -1,5 +1,5 @@
 <template>
-  <div v-html="qrString" style="width:200px, height:200px"></div>
+  <div v-html="qrString"></div>
 </template>
 
 <script>
