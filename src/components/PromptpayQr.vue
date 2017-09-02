@@ -26,7 +26,6 @@
     },
     methods: {
       generateSvg () {
-        console.log(this.id, this.amount)
         qr.toString(generatePayload(this.id, { amount: this.amount }), { type: 'svg', errorCorrectionLevel: 'L' }, (err, svg) => {
           if (err) {
             window.alert('Cannot generate QR code: ' + String(err))
