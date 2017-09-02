@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <qrcode-vue :value="qrString" :size="250"></qrcode-vue>
-  </div>
+  <div v-html="qrString" style="width:200px, height:200px"></div>
 </template>
 
 <script>
-  import { encode } from '../libs/ppqrcode.js'
-  import QrcodeVue from 'qrcode.vue'
+  import generatePayload from 'promptpay-qr'
+  import qr from 'qrcode'
 
   export default {
     props: {
-      id: { type: Number, required: true },
+      id: { type: String, required: true },
       amount: { type: Number, required: true }
     },
     data () {
@@ -18,21 +16,28 @@
         qrString: ''
       }
     },
-    mounted () {
-      let mid = {}
-      mid = { nationalId: this.id + '' }
-
-      this.qrString = encode({
-        pointOfInitiation: '11',
-        merchantAccPromptpay: mid,
-        merchant: { countryCode: 'TH' },
-        transaction: { transactionCurrency: '764', transactionAmount: this.amount + '' },
-        additionalData: {},
-        unreserved: {}
-      }).data
+    watch: {
+      id (newId) {
+        this.generateSvg()
+      },
+      amount (newAmount) {
+        this.generateSvg()
+      }
     },
-    components: {
-      QrcodeVue
+    methods: {
+      generateSvg () {
+        console.log(this.id, this.amount)
+        qr.toString(generatePayload(this.id, { amount: this.amount }), { type: 'svg', errorCorrectionLevel: 'L' }, (err, svg) => {
+          if (err) {
+            window.alert('Cannot generate QR code: ' + String(err))
+            return
+          }
+          this.qrString = svg
+        })
+      }
+    },
+    mounted () {
+      this.generateSvg()
     }
   }
 </script>
