@@ -9,9 +9,10 @@ const libName = 'vue-promptpay-qr'
 
 rollup({
   input: 'index.js',
-  globals: {
-    'qrcode.vue': 'qrcode.vue'
-  },
+  // globals: {
+  //   'promptpay-qr': 'promptpay-qr',
+  //   'qrcode': 'qrcode'
+  // },
   plugins: [
     vue({
       compileTemplate: true,
