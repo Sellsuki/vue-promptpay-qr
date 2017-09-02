@@ -21,3 +21,11 @@ export default {
   }
 }
 </script>
+
+<style>
+  #app svg {
+    width: 400px;
+    height: 400px;
+  }
+</style>
+
