@@ -9,7 +9,7 @@
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",
-    "deploy:page": "node build/build-ghpages.js&&push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy:page": "node build/build-ghpages.js&&push-dir --dir=page --branch=gh-pages --cleanup"
   },
   "homepage": "ttps://github.com/Sellsuki/vue-promptpay-qr",
   "repository": {
