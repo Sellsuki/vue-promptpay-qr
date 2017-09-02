@@ -1,15 +1,16 @@
 {
   "name": "vue-promptpay-qr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Vue.js project",
   "author": "Sellsuki",
-  "main": "dist/static/vue-promtpay-qr.js",
+  "main": "dist/vue-promptpay-qr.min.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
-    "build": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src",
-    "deploy:page": "node build/build-ghpages.js&&push-dir --dir=page --branch=gh-pages --cleanup"
+    "build": "node build/rollup-build.js",
+    "build:page": "node build/build.js",
+    "deploy:page": "node build/build-ghpages.js&&push-dir --dir=page --branch=gh-pages --cleanup",
+    "lint": "eslint --ext .js,.vue src"
   },
   "homepage": "ttps://github.com/Sellsuki/vue-promptpay-qr",
   "repository": {
