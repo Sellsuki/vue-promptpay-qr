@@ -1,21 +1,31 @@
 # vue-promptpay-qr
 
-> A Vue.js project
+> Component to generate promptpay qrcode
 
-## Build Setup
+## Installation
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+npm install -D vue-promptpay-qr
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Usage
+
+``` bash
+import Vue from 'vue'
+import VuePromptpayQr from 'vue-promptpay-qr'
+
+Vue.use(VuePromptpayQr)
+```
+
+## Props
+
+**id** String id or mobilenumber
+
+**amount** Number amount in THB
+
+## Example
+
+``` bash
+<promptpay-qr id="1234567890123" :amount="500"></promptpay-qr>
+```
+
