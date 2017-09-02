@@ -1,4 +1,5 @@
 .DS_Store
+page/
 node_modules/
 !dist/.gitkeep
 npm-debug.log*

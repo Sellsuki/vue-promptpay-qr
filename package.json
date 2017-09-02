@@ -1,6 +1,6 @@
 {
   "name": "vue-promptpay-qr",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A Vue.js project",
   "author": "Sellsuki",
   "main": "dist/vue-promptpay-qr.min.js",
