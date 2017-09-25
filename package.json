@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "crc": "^3.4.4",
-    "promptpay-qr": "^0.4.1",
+    "promptpay-qr": "^0.4.4",
     "vue": "^2.4.2"
   },
   "devDependencies": {
